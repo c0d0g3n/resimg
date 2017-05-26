@@ -1,0 +1,14 @@
+{
+  "name": "resimg",
+  "version": "0.1.0",
+  "description": "Creates images of different sizes",
+  "main": "resimg.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "c0d0g3n",
+  "license": "ISC",
+  "dependencies": {
+    "gm": "^1.23.0"
+  }
+}
