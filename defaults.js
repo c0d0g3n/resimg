@@ -8,4 +8,5 @@ module.exports = {
   inputDir: [process.cwd(), 'full'].join(path.sep), // [cwd]/full
   // Where to save resized images; submaps for every size are created in this location
   outputDir: process.cwd(), // [cwd]
+  sizes: [400,1200], // Array of numbers
 }

@@ -9,6 +9,9 @@
   "author": "c0d0g3n",
   "license": "ISC",
   "dependencies": {
-    "gm": "^1.23.0"
+    "bluebird": "^3.5.0",
+    "gm": "^1.23.0",
+    "mkdirp": "^0.5.1",
+    "yargs": "^8.0.1"
   }
 }

@@ -1,10 +1,11 @@
-// dependencies
-const fs = require('fs')
-
-// load configuration
-const settings = (function () {
-  const defaults = require('./defaults.js')
-  const settings = fs.existsSync('./settings.js') ? require('./settings.js') : {}
-
-  return Object.assign({}, defaults, settings)
-})()
+const yargs = require('yargs')
+  .usage('$0 <command> [arguments]')
+  .option('s', {
+    alias: 'silent',
+    type: 'boolean',
+    describe: 'Hide file logging'
+  })
+  .commandDir('./commands')
+  .demandCommand()
+  .help()
+  .argv
