@@ -11,7 +11,7 @@ exports.command = 'resize'
 exports.desc = `Resize images from '${settings.inputDir}' and store in '${settings.outputDir}/[size]'.`
 exports.handler = (argv) => {
   // initialize new terminal printer
-  const log = new Logger(false)
+  const log = new Logger(argv.s)
 
   // output config info
   log
