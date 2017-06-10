@@ -4,9 +4,14 @@ const path = require('path')
 // instead, rename settings_example.js to settings.js and change the configuration there
 
 module.exports = {
+  sizes: [400,1200], // Array of numbers
   // Where to fetch images to resize
   inputDir: [process.cwd(), 'full'].join(path.sep), // [cwd]/full
   // Where to save resized images; submaps for every size are created in this location
   outputDir: process.cwd(), // [cwd]
-  sizes: [400,1200], // Array of numbers
+  remoteDir: 'ftp location that should reflect outputDir', // Should be an absolute path
+  ftpHost: 'localhost',
+  ftpPort: '21',
+  ftpUser: 'configure an user',
+  ftpPass: 'password for ftpUser',
 }

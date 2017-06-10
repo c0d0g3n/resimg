@@ -27,9 +27,10 @@ exports.handler = (argv) => {
         // shorter path for logging
         const shortFile = path.relative(settings.outputDir, file)
 
-        return Promise.fromCallback((callback) => {
-          gm(file).format(callback)
-        })
+        return Promise
+          .fromCallback((callback) => {
+            gm(file).format(callback)
+          })
           .then((ext) => {
             // array with promises to track every resize
             let resizes = []
@@ -71,6 +72,7 @@ exports.handler = (argv) => {
     })
     .then(() => {
       log.enter().info('Job\'s done!')
+      process.exit(0)
     })
     .catch((err) => {
       console.error(err);

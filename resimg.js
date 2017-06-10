@@ -5,6 +5,12 @@ const yargs = require('yargs')
     type: 'boolean',
     describe: 'Hide file logging'
   })
+  .option('f', {
+    alias: 'force',
+    type: 'boolean',
+    default: false,
+    describe: 'Override remote files if necessary'
+  })
   .commandDir('./commands')
   .demandCommand()
   .help()
