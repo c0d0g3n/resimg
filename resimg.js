@@ -3,13 +3,12 @@ const yargs = require('yargs')
   .option('s', {
     alias: 'silent',
     type: 'boolean',
-    describe: 'Hide file logging'
+    describe: 'Do not output to terminal'
   })
   .option('f', {
     alias: 'force',
     type: 'boolean',
-    default: false,
-    describe: 'Override remote files if necessary'
+    describe: 'Do not ask permission for dangerous operations (overriding/removing remote...)'
   })
   .commandDir('./commands')
   .demandCommand()

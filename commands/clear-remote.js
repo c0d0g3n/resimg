@@ -5,7 +5,7 @@ const removeRemoteDir = require('../lib/removeRemoteDir')
 const settings = require('../lib/settings')
 
 exports.command = 'clear-remote'
-exports.desc = `remove all files in '${settings.remoteDir}'`
+exports.desc = `remove all files in '${settings.remoteDir}' at 'ftp://${settings.ftpUser}@${settings.ftpHost}:${settings.ftpPort}'`
 exports.handler = (argv) => {
   // logger
   const log = new Logger(argv.s)
