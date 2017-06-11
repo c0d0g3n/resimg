@@ -8,7 +8,7 @@ const yargs = require('yargs')
   .option('f', {
     alias: 'force',
     type: 'boolean',
-    describe: 'Do not ask permission for dangerous operations (overriding/removing remote...)'
+    describe: 'Do not ask permission for dangerous operations (overriding/removing...)'
   })
   .commandDir('./commands')
   .demandCommand()

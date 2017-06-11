@@ -1,7 +1,6 @@
 const Promise = require('bluebird')
 const mkdirp = require('mkdirp')
 const gm = require('gm')
-const fs = require('fs')
 const path = require('path')
 const settings = require('../lib/settings')
 const findFiles = require('../lib/findFiles')
