@@ -6,7 +6,7 @@ const path = require('path')
 module.exports = {
   sizes: [400,1200], // Array of numbers
   // Where to fetch images to resize
-  inputDir: [process.cwd(), 'full'].join(path.sep), // [cwd]/full
+  inputDir: path.join(process.cwd(), 'full'), // [cwd]/full
   // Where to save resized images; submaps for every size are created in this location
   outputDir: process.cwd(), // [cwd]
   remoteDir: 'ftp location that should reflect outputDir', // Should be an absolute path
@@ -14,4 +14,6 @@ module.exports = {
   ftpPort: '21',
   ftpUser: 'configure an user',
   ftpPass: 'password for ftpUser',
+  templateDir: path.join(__dirname, 'templates'),
+  templateDefault: 'full_links.hbs',
 }
