@@ -11,9 +11,15 @@ module.exports.desc = 'fill a template with images'
 module.exports.handler = (argv) => {
   const templateSource = path.join(settings.templateDir, settings.templateDefault)
 
+  let useFiles = settings.inputDir
+  // limit files
+  if (argv._[1]) {
+    useFiles = path.join(settings.inputDir, argv._[1])
+  }
+
   // tasks
   const readTemplateSource = fs.readFileAsync(templateSource, 'utf8')
-  const findInputFiles = findFiles(settings.inputDir)
+  const findInputFiles = findFiles(useFiles)
 
   Promise
     .join(readTemplateSource, findInputFiles)

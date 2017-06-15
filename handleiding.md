@@ -9,3 +9,4 @@
 - `./resimg clear-local`: Maak de map `outputDir` leeg. (`inputDir` wordt genegeerd)
 - `./resimg clear-remote`: Maak de map `remoteDir` leeg (op ftp-server).
 - `./resimg generate-html`: Maak htmlpagina's van afbeeldinglijsten.
+  - `./resimg generate-html relative/path/in/input/dir`: Beperk de afbeeldingen die in de html layout gebruikt worden tot een deelmap van `inputDir`.
